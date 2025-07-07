@@ -4,274 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myctix Archive - Belajar Santai untuk Mahasiswa Baru</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Myctix Archive Logo">
-                <span>Myctix Archive</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#features">Fitur</a></li>
-                <li><a href="#preview">Preview</a></li>
-                <li><a href="#pricing">Harga</a></li>
-                <li><a href="#contact" class="cta-button">Hubungi</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="assets/logo.jpg" alt="Myctix Archive Logo">
+                    Myctix Archive
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#preview">Preview</a></li>
+                    <li><a href="#pricing">Harga</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
             <div class="hero-content">
-                <h1>Belajar Santai, Paham Lebih Dalam</h1>
-                <p class="subtitle">Notion template edukasi untuk mahasiswa baru semester 1. Materi lengkap dengan gaya penyampaian yang mudah dicerna.</p>
-                <div class="hero-buttons">
-                    <a href="#preview" class="cta-button primary">Lihat Produk</a>
-                    <a href="#contact" class="cta-button secondary">Hubungi Saya</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/notion-preview-1.png" alt="Preview Myctix Archive">
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="section-header">
-                <h2>Tentang Myctix Archive</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Myctix Archive lahir dari pengalaman pribadi sebagai mahasiswa yang kesulitan memahami materi kuliah di semester awal. Saya membuat template Notion ini untuk membantu mahasiswa baru seperti Anda belajar dengan lebih terstruktur dan santai.</p>
-                    <p>Fokus utama kami adalah mata kuliah dasar seperti Algoritma & Pemrograman C, Discrete Mathematics, dan Linear Algebra - materi yang sering menjadi momok di semester pertama.</p>
-                    <div class="values">
-                        <div class="value-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Praktis & Terstruktur</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-smile"></i>
-                            <span>Bahasa Santai</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-infinity"></i>
-                            <span>Akses Seumur Hidup</span>
-                        </div>
+                <div class="hero-text">
+                    <h1>Belajar Santai, Hasil Maksimal</h1>
+                    <p>Notion template lengkap untuk mahasiswa baru semester 1. Kuasai Algoritma, Matematika Diskrit, dan Aljabar Linear dengan cara yang menyenangkan!</p>
+                    <div class="cta-buttons">
+                        <a href="#preview" class="btn">Lihat Produk</a>
+                        <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="assets/notion-preview-2.png" alt="Tentang Myctix Archive">
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/500x350/f0f7ff/2563eb?text=Myctix+Archive" alt="Myctix Archive Preview">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Features Section -->
-        <section class="features" id="features">
-            <div class="section-header">
-                <h2>Apa yang Anda Dapatkan?</h2>
-                <div class="divider"></div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Myctix Archive</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Myctix Archive dibuat oleh mahasiswa untuk mahasiswa, khususnya kalian yang baru memasuki semester 1 dan masih bingung dengan materi kuliah.</p>
+                    <p>Kami memahami betapa menakutkannya mata kuliah seperti Algoritma & Pemrograman atau Matematika Diskrit bagi mahasiswa baru. Itulah mengapa kami merancang materi ini dengan pendekatan yang santai namun tetap komprehensif.</p>
+                    <p>Dengan Myctix Archive, kamu bisa belajar kapan saja, di mana saja, dengan gaya yang lebih personal dan mudah dipahami dibanding textbook kampus.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x300/ffffff/2563eb?text=Belajar+Santai" alt="Tentang Myctix Archive">
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Fitur Unggulan</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
                     <h3>Materi Lengkap</h3>
-                    <p>Semua materi disusun sesuai silabus kampus dengan referensi dari buku teks terpercaya dan penjelasan tambahan.</p>
+                    <p>Semua materi disusun sesuai silabus kampus terbaru, mencakup seluruh topik penting yang akan kamu pelajari di semester 1.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-comment-dots"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Ditulis oleh Mahasiswa Berprestasi</h3>
+                    <p>Materi dibuat oleh mahasiswa yang pernah mendapatkan nilai sempurna (100) di mata kuliah ini, jadi kamu belajar dari yang terbaik.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
                     <h3>Bahasa Santai</h3>
-                    <p>Penjelasan dengan bahasa sehari-hari yang mudah dipahami mahasiswa baru, tanpa jargon berlebihan.</p>
+                    <p>Penjelasan menggunakan bahasa sehari-hari yang mudah dimengerti, jauh dari kesan textbook yang kaku dan membosankan.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Latihan Soal</h3>
-                    <p>Kumpulan soal latihan dengan pembahasan langkah demi langkah untuk menguji pemahaman Anda.</p>
+                    <h3>Latihan Soal + Pembahasan</h3>
+                    <p>Puluhan soal latihan dengan pembahasan detail untuk mengasah pemahamanmu, termasuk soal ujian tahun-tahun sebelumnya.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Akses Fleksibel</h3>
-                    <p>Bisa dibuka di HP maupun laptop melalui aplikasi Notion atau browser.</p>
+                    <h3>Akses di HP dan Laptop</h3>
+                    <p>Bisa dibuka di semua perangkat melalui Notion, jadi kamu bisa belajar sambil nongkrong atau dalam perjalanan.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Update Berkala</h3>
-                    <p>Materi akan terus diperbarui berdasarkan masukan dari pengguna dan perkembangan kurikulum.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
+                        <i class="fas fa-infinity"></i>
                     </div>
                     <h3>Lifetime Access</h3>
-                    <p>Sekali beli, dapatkan akses seumur hidup ke semua materi dan update berikutnya.</p>
+                    <p>Sekali beli, bisa dipakai selamanya. Kamu juga akan mendapatkan update materi gratis di masa depan.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Preview Section -->
-        <section class="preview" id="preview">
-            <div class="section-header">
-                <h2>Preview Produk</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="preview-slider">
-                <div class="slider-container">
-                    <div class="slide active">
-                        <img src="assets/notion-preview-1.png" alt="Preview 1">
-                        <div class="slide-caption">
-                            <h3>Struktur Materi yang Terorganisir</h3>
-                            <p>Semua materi disusun dalam database Notion yang mudah dinavigasi dengan sistem tagging untuk memfilter berdasarkan topik.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/notion-preview-2.png" alt="Preview 2">
-                        <div class="slide-caption">
-                            <h3>Penjelasan Langkah Demi Langkah</h3>
-                            <p>Konsep sulit dipecah menjadi bagian-bagian kecil dengan contoh konkret dan analogi yang relevan.</p>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/notion-preview-3.png" alt="Preview 3">
-                        <div class="slide-caption">
-                            <h3>Latihan Soal Interaktif</h3>
-                            <p>Soal latihan dengan toggle untuk melihat pembahasan, memungkinkan Anda mencoba sendiri sebelum melihat jawaban.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="pricing" id="pricing">
-            <div class="section-header">
-                <h2>Harga & Cara Pemesanan</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="pricing-content">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Paket Lengkap</h3>
-                        <div class="price">Rp 99.000</div>
-                        <p>sekali bayar</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Akses ke semua materi</li>
-                        <li><i class="fas fa-check"></i> Lifetime access</li>
-                        <li><i class="fas fa-check"></i> Update materi gratis</li>
-                        <li><i class="fas fa-check"></i> Template Notion eksklusif</li>
-                        <li><i class="fas fa-check"></i> Bonus cheat sheet</li>
-                    </ul>
-                    <div class="payment-methods">
-                        <p><strong>Metode Pembayaran:</strong></p>
-                        <p>Transfer Bank (BCA/BRI) atau DANA</p>
-                    </div>
-                    <div class="qr-code">
-                        <img src="assets/whatsapp-qr.png" alt="QR Code WhatsApp">
-                        <p>Scan QR untuk langsung chat via WhatsApp</p>
-                    </div>
-                    <a href="#contact" class="cta-button primary">Pesan Sekarang</a>
-                </div>
-                <div class="pricing-info">
-                    <h3>Bagaimana cara kerjanya?</h3>
-                    <ol>
-                        <li>Anda menghubungi kami via WhatsApp/LINE</li>
-                        <li>Kami mengirimkan detail pembayaran</li>
-                        <li>Setelah pembayaran dikonfirmasi, kami akan mengirim link template Notion ke email Anda</li>
-                        <li>Anda bisa langsung mengakses dan mempelajari materinya</li>
-                    </ol>
-                    <div class="guarantee">
-                        <i class="fas fa-shield-alt"></i>
-                        <p><strong>Garansi 7 hari:</strong> Jika template tidak sesuai ekspektasi, kami akan mengembalikan uang Anda 100%.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="section-header">
-                <h2>Hubungi Kami</h2>
-                <div class="divider"></div>
-                <p class="section-subtitle">Punya pertanyaan atau ingin memesan? Jangan ragu untuk menghubungi kami.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-methods">
-                    <a href="https://wa.me/6281234567890" class="contact-button whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Chat via WhatsApp</span>
-                    </a>
-                    <a href="https://line.me/ti/p/~myctix" class="contact-button line">
-                        <i class="fab fa-line"></i>
-                        <span>Chat via LINE</span>
-                    </a>
-                    <a href="mailto:hello@myctix.com" class="contact-button email">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email Kami</span>
-                    </a>
-                </div>
-                <div class="contact-info">
-                    <p><i class="fas fa-clock"></i> <strong>Jam Operasional:</strong> Senin-Jumat, 09:00-17:00 WIB</p>
-                    <p><i class="fas fa-reply"></i> <strong>Waktu Respon:</strong> Maksimal 2 jam kerja</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="assets/logo.png" alt="Myctix Archive Logo">
-                <span>Myctix Archive</span>
-            </div>
-            <div class="footer-links">
-                <a href="#about">Tentang</a>
-                <a href="#features">Fitur</a>
-                <a href="#preview">Preview</a>
-                <a href="#pricing">Harga</a>
-                <a href="#contact">Kontak</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Myctix Archive. All rights reserved.</p>
-            <p>Made with <i class="fas fa-heart"></i> for Indonesian students</p>
+    </section>
+
+    <!-- Preview Section -->
+    <section id="preview">
+        <div class="container">
+            <h2>Preview Produk</h2>
+            <div class="preview-container">
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x250/f0f7ff/2563eb?text=Algoritma+C" alt="Preview Algoritma">
+                    <p class="preview-caption">Struktur Materi Algoritma & Pemrograman C</p>
+                </div>
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x250/f0f7ff/2563eb?text=Math+Diskrit" alt="Preview Matematika Diskrit">
+                    <p class="preview-caption">Contoh Pembahasan Matematika Diskrit</p>
+                </div>
+                <div class="preview-item">
+                    <img src="https://via.placeholder.com/400x250/f0f7ff/2563eb?text=Latihan+Soal" alt="Preview Latihan Soal">
+                    <p class="preview-caption">Bank Soal dengan Pembahasan Lengkap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Profile Section -->
+    <section id="author" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2>Profil Penulis</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Materi ini dibuat oleh praktisi yang memiliki bukti kompetensi di bidangnya</p>
+            
+            <div class="achievement-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- Card 1 -->
+                <div class="achievement-card" style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div class="card-image" style="height: 200px; background-color: #f0f7ff; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://via.placeholder.com/300x150/f0f7ff/2563eb?text=Bukti+Nilai+100" alt="Bukti Nilai 100" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <div class="achievement-icon" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Nilai Sempurna 100</h3>
+                        <p style="margin-bottom: 15px;">Mendapatkan nilai sempurna di mata kuliah Algoritma & Pemrograman C dengan pendekatan belajar yang efektif.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="achievement-card" style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div class="card-image" style="height: 200px; background-color: #f0f7ff; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://via.placeholder.com/300x150/f0f7ff/2563eb?text=Sertifikat+Hackathon" alt="Sertifikat Hackathon" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <div class="achievement-icon" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Juara Hackathon</h3>
+                        <p style="margin-bottom: 15px;">Berpengalaman di berbagai kompetisi Hackathon nasional dan memahami penerapan algoritma dalam dunia nyata.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="achievement-card" style="background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <div class="card-image" style="height: 200px; background-color: #f0f7ff; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://via.placeholder.com/300x150/f0f7ff/2563eb?text=Sertifikat+Mentor" alt="Sertifikat Mentor" style="max-width: 100%; max-height: 100%;">
+                    </div>
+                    <div class="card-content" style="padding: 25px;">
+                        <div class="achievement-icon" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 10px;">Pengalaman Mengajar</h3>
+                        <p style="margin-bottom: 15px;">Sudah melatih lebih dari 100 mahasiswa baru sebagai mentor dan asisten dosen, memahami kesulitan pemula.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Harga & Cara Pemesanan</h2>
+            <div class="pricing-card">
+                <h3>Paket Lengkap 3 Mata Kuliah</h3>
+                <p>Algoritma & Pemrograman C + Matematika Diskrit + Aljabar Linear</p>
+                <div class="price">Rp 99.000 <span>(sekali bayar)</span></div>
+                <p>Akses seumur hidup + update materi gratis</p>
+                <p>Cara pemesanan:</p>
+                <ol style="text-align: left; margin: 20px auto; max-width: 300px;">
+                    <li>Hubungi via WhatsApp/LINE</li>
+                    <li>Transfer pembayaran</li>
+                    <li>Dapatkan link akses Notion</li>
+                </ol>
+                <div class="qr-code">
+                    <i class="fas fa-qrcode"></i>
+                </div>
+                <p>Scan QR code untuk langsung chat via WhatsApp</p>
+                <a href="#contact" class="btn btn-secondary">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p class="text-center">Ada pertanyaan tentang produk? Ingin konsultasi tentang materi kuliah? Jangan ragu untuk menghubungi kami!</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/6281234567890" class="contact-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://line.me/ti/p/~myctix" class="contact-btn line" target="_blank">
+                    <i class="fab fa-line"></i>
+                    LINE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo">Myctix Archive</a>
+            <p>Belajar santai, hasil maksimal untuk mahasiswa baru semester 1</p>
+            <p class="copyright">&copy; 2023 Myctix Archive. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
