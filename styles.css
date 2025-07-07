@@ -188,6 +188,7 @@ nav {
     flex: 1;
     min-width: 300px;
     text-align: center;
+    margin-left: 20px;
 }
 
 .hero-image img {
@@ -266,7 +267,7 @@ nav {
 
 /* Author Profile Card Styles */
 #author {
-    background-color: #f8fafc;
+    background-color: white;
 }
 
 .achievement-cards {

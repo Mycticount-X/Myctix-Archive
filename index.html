@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/500x350/f0f7ff/2563eb?text=Myctix+Archive" alt="Myctix Archive Preview">
+                    <img src="./assets/main.png" alt="Myctix Archive Preview">
                 </div>
             </div>
         </div>
@@ -142,7 +142,6 @@
     <section id="author" style="background-color: #f8fafc;">
         <div class="container">
             <h2>Profil Penulis</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Materi ini dibuat oleh praktisi yang memiliki bukti kompetensi di bidangnya</p>
             
             <div class="achievement-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
                 <!-- Card 1 -->
@@ -194,17 +193,110 @@
     <section id="pricing">
         <div class="container">
             <h2>Harga & Cara Pemesanan</h2>
+            <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- Per Mata Kuliah -->
+                <div class="pricing-card" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); text-align: center;">Per Mata Kuliah</h3>
+                    <div class="price" style="font-size: 2rem; font-weight: 700; color: var(--primary); text-align: center; margin: 20px 0;">
+                        Rp 35.000
+                    </div>
+                    <ul style="list-style: none; margin-bottom: 25px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Pilih salah satu mata kuliah</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Akses seumur hidup</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Update materi gratis</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn" style="display: block; text-align: center; width: 100%;">Pilih Ini</a>
+                </div>
+
+                <!-- Khusus Algorithm -->
+                <div class="pricing-card" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); border: 2px solid var(--secondary); position: relative;">
+                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: var(--secondary); color: white; padding: 3px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                        POPULER
+                    </div>
+                    <h3 style="color: var(--primary); text-align: center;">Khusus Algorithm</h3>
+                    <div class="price" style="font-size: 2rem; font-weight: 700; color: var(--primary); text-align: center; margin: 20px 0;">
+                        Rp 50.000
+                    </div>
+                    <ul style="list-style: none; margin-bottom: 25px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Algoritma & Pemrograman C</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Bonus: Kumpulan Soal Ujian</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Akses seumur hidup</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Update materi gratis</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn btn-secondary" style="display: block; text-align: center; width: 100%;">Pilih Ini</a>
+                </div>
+
+                <!-- Paket Lengkap -->
+                <div class="pricing-card" style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                    <h3 style="color: var(--primary); text-align: center;">Paket Lengkap</h3>
+                    <div class="price" style="font-size: 2rem; font-weight: 700; color: var(--primary); text-align: center; margin: 20px 0;">
+                        Rp 99.000
+                    </div>
+                    <ul style="list-style: none; margin-bottom: 25px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Algoritma & Pemrograman C</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Matematika Diskrit</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Aljabar Linear</span>
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Akses seumur hidup</span>
+                        </li>
+                        <li style="padding: 8px 0; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--secondary); margin-right: 10px; margin-top: 4px;"></i>
+                            <span>Update materi gratis</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn" style="display: block; text-align: center; width: 100%;">Pilih Ini</a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <div class="qr-code" style="width: 150px; height: 150px; margin: 0 auto 20px; background-color: #f1f5f9; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <i class="fas fa-qrcode" style="font-size: 3rem; color: var(--gray);"></i>
+                </div>
+                <p>Scan QR code untuk langsung chat via WhatsApp</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing">
+        <div class="container">
+            <h2>Harga & Cara Pemesanan</h2>
             <div class="pricing-card">
-                <h3>Paket Lengkap 3 Mata Kuliah</h3>
+                <h3>Paket Lengkap</h3>
                 <p>Algoritma & Pemrograman C + Matematika Diskrit + Aljabar Linear</p>
                 <div class="price">Rp 99.000 <span>(sekali bayar)</span></div>
                 <p>Akses seumur hidup + update materi gratis</p>
-                <p>Cara pemesanan:</p>
-                <ol style="text-align: left; margin: 20px auto; max-width: 300px;">
-                    <li>Hubungi via WhatsApp/LINE</li>
-                    <li>Transfer pembayaran</li>
-                    <li>Dapatkan link akses Notion</li>
-                </ol>
                 <div class="qr-code">
                     <i class="fas fa-qrcode"></i>
                 </div>
@@ -212,7 +304,7 @@
                 <a href="#contact" class="btn btn-secondary">Pesan Sekarang</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact">
@@ -237,7 +329,7 @@
         <div class="container">
             <a href="#" class="footer-logo">Myctix Archive</a>
             <p>Belajar santai, hasil maksimal untuk mahasiswa baru semester 1</p>
-            <p class="copyright">&copy; 2023 Myctix Archive. All rights reserved.</p>
+            <p class="copyright">&copy; 2025 Myctix Archive. All rights reserved.</p>
         </div>
     </footer>
 
