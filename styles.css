@@ -314,6 +314,16 @@ nav {
     margin-bottom: 15px;
 }
 
+.achievement-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    margin-bottom: 15px;
+    color: #374151;
+}
+
 @media (max-width: 768px) {
     .achievement-cards {
         grid-template-columns: 1fr;
