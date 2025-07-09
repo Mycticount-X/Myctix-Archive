@@ -158,6 +158,7 @@ nav {
 #hero {
     padding-top: 120px;
     background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    background-color: white;
 }
 
 .hero-content {
@@ -204,39 +205,10 @@ nav {
     margin-top: 20px;
 }
 
-/* About Section */
-#about {
-    background-color: white;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.about-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
 
 /* Features Section */
 #features {
-    background-color: #f8fafc;
+    background-color: white;
 }
 
 .features-grid {
@@ -327,6 +299,44 @@ nav {
     color: #374151;
 }
 
+/* Additional icon colors for variety */
+.achievement-card:nth-child(1) .achievement-icon {
+    color: #f59e0b; /* Gold for S-Class */
+}
+
+.achievement-card:nth-child(2) .achievement-icon {
+    color: #3b82f6; /* Blue for Developer */
+}
+
+.achievement-card:nth-child(3) .achievement-icon {
+    color: #8b5cf6; /* Purple for Aslab */
+}
+
+.achievement-card:nth-child(4) .achievement-icon {
+    color: #10b981; /* Green for Microsoft */
+}
+
+.achievement-card:nth-child(5) .achievement-icon {
+    color: #ec4899; /* Pink for Teaching */
+}
+
+.achievement-card:nth-child(6) .achievement-icon {
+    color: #14b8a6; /* Teal for Notes */
+}
+
+/* Adjust grid for better 6-card layout */
+@media (min-width: 1200px) {
+    .achievement-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .achievement-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .achievement-cards {
         grid-template-columns: 1fr;
@@ -335,7 +345,7 @@ nav {
 
 /* Preview Section */
 #preview {
-    background-color: white;
+    background-color: #f8fafc;
 }
 
 .preview-container {
@@ -443,6 +453,106 @@ nav {
     color: var(--gray);
 }
 
+#pricing {
+  padding: 60px 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card h3 {
+  color: var(--primary);
+  text-align: center;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: flex-start;
+}
+
+.pricing-card ul li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card i {
+  color: var(--secondary);
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.popular-card {
+  border: 2px solid var(--secondary);
+  position: relative;
+}
+
+.popular-card .badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secondary);
+  color: white;
+  padding: 3px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.qr-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.qr-code i {
+    font-size: 3rem;
+    color: var(--gray);
+}
+
+.qr-code img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
 /* Contact Section */
 #contact {
     background-color: white;
@@ -480,6 +590,22 @@ nav {
 
 .contact-btn.line {
     background-color: #00B900;
+}
+
+/* .contact-btn.linktree {
+    background-color: #39e09b;
+    background: linear-gradient(90deg, #39e09b 0%, #2cb67d 100%);
+} */
+
+.contact-btn.linktree {
+    background-color: #f8f9fa;
+    color: #2cb67d;
+    border: 2px solid #2cb67d;
+}
+
+.contact-btn.linktree:hover {
+    background-color: #2cb67d;
+    color: white;
 }
 
 .contact-btn i {
