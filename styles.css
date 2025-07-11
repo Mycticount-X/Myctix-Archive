@@ -628,12 +628,6 @@ nav {
     transition: transform 0.3s ease;
 }
 
-@media (minwidth: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
-    .qr-wrapper {
-        width: 600px;
-    }
-}
-
 .qr-code:hover {
     transform: scale(1.03);
 }
@@ -728,6 +722,23 @@ nav {
     background: linear-gradient(135deg, #39e09b 0%, #2cb67d 100%);
     color: white;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+  .qr-wrapper {
+    max-width: 90%;
+    padding: 30px 25px;
+  }
+
+  .qr-code {
+    width: 200px;
+    height: 200px;
+  }
+
+  .qr-instruction {
+    font-size: 1rem;
+  }
+}
+
 
 /* Footer */
 footer {
