@@ -280,12 +280,12 @@ nav {
     }
 
     .feature-card h3 {
-        color:#00B900;
-        font-size: 2rem;
+        /* color:#00B900; */
+        font-size: 1.8rem;
     }
     
     .feature-card p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
