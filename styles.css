@@ -207,7 +207,7 @@ nav {
 
 @media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
     .hero-text {
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
     .hero-text h1 {
@@ -287,11 +287,11 @@ nav {
     }
     
     .feature-card h3 {
-        font-size: 1rem;
+        font-size: 16px;
     }
     
     .feature-card p {
-        font-size: 0.7rem;
+        font-size: 12px;
     }
 }
 
@@ -421,11 +421,11 @@ nav {
     }
 
     .achievement-card h3 {
-        font-size: 1.2rem;
+        font-size: 16px;
     }
 
     .achievement-card p {
-        font-size: 0.7rem;
+        font-size: 12px;
     }
 }
 
@@ -585,12 +585,12 @@ nav {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
-    pricing-card h3 {
-        font-size: 1rem;
+    .pricing-card h3 {
+        font-size: 16px;
     }
 
     .price {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .pricing-grid {
