@@ -897,20 +897,8 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .footer-tagline {
-        font-size: 14px;
-    }
-
-    .footer-heading {
-        font-size: 16px;
-    }
-
-    .footer-links li {
-        margin-bottom: 0;
-    }
-
-    .footer-links a {
-        font-size: 14px;
+    .footer-grid {
+        display: none !important;
     }
 }
 
