@@ -43,3 +43,17 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
 });
+
+// Detect mobile desktop mode
+function adjustForMobileDesktop() {
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const isSmallViewport = window.innerWidth < 1024;
+    
+    if (isTouchDevice && isSmallViewport) {
+        document.documentElement.style.fontSize = '14px';
+        document.getElementById('features').classList.add('mobile-desktop-view');
+    }
+}
+
+window.addEventListener('resize', adjustForMobileDesktop);
+adjustForMobileDesktop();
