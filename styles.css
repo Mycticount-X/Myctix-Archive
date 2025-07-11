@@ -176,11 +176,12 @@ nav {
 
 .hero-text h1 {
     color: var(--primary);
+    font-size: 3.0rem;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     color: var(--dark);
 }
@@ -244,7 +245,6 @@ nav {
 /* Mobile Desktop Site (iPad, Tablet, Mobile dengan layar besar) */
 @media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
     #features {
-        /* Jangan pakai zoom */
         font-size: 0.9rem; /* Turunkan base font-size */
     }
     
@@ -262,6 +262,30 @@ nav {
     
     .feature-card p {
         font-size: 0.9rem;
+    }
+}
+
+/* Standard Mobile View */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .feature-card h3 {
+        color:#00B900;
+        font-size: 2rem;
+    }
+    
+    .feature-card p {
+        font-size: 1.5rem;
     }
 }
 
