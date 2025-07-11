@@ -205,6 +205,16 @@ nav {
     margin-top: 20px;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
@@ -404,17 +414,33 @@ nav {
     .achievement-cards {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .achievement-card h3 {
+        color: red;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
     .achievement-cards {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .achievement-card h3 {
+        color: yellow;
+    }
 }
 
 @media (max-width: 768px) {
     .achievement-cards {
         grid-template-columns: 1fr;
+    }
+
+    .achievement-card h3 {
+        color: green;
     }
 }
 
