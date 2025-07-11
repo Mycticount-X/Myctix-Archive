@@ -205,27 +205,6 @@ nav {
     margin-top: 20px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
-    #hero {
-        padding-top: 100px; /* Adjust padding for mobile desktop */
-    }
-
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .hero-image {
-        margin-left: 0;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
@@ -284,6 +263,11 @@ nav {
     #features {
         font-size: 0.9rem; /* Turunkan base font-size */
     }
+
+    .features-grid {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     
     .feature-card {
         padding: 1.2rem;
@@ -294,12 +278,11 @@ nav {
     }
     
     .feature-card h3 {
-        color: red;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .feature-card p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 }
 
