@@ -248,19 +248,20 @@ nav {
     }
     
     .feature-card {
-        padding: 1.5rem;
+        padding: 24px;
     }
     
     .feature-icon {
-        font-size: 2rem;
+        font-size: 32px;
     }
     
     .feature-card h3 {
-        font-size: 1.3rem;
+        color: red;
+        font-size: 20px;
     }
     
     .feature-card p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 }
 
