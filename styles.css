@@ -241,40 +241,30 @@ nav {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
-/* Mobile Desktop Site Overrides */
+/* Mobile Desktop Site (iPad, Tablet, Mobile dengan layar besar) */
 @media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
     #features {
-        zoom: 0.9;
+        /* Jangan pakai zoom */
+        font-size: 0.9rem; /* Turunkan base font-size */
     }
     
     .feature-card {
-        padding: 24px;
+        padding: 1.2rem;
     }
     
     .feature-icon {
-        font-size: 32px;
+        font-size: 1.6rem; /* Turunkan font */
     }
     
     .feature-card h3 {
-        color: red;
-        font-size: 20px;
+        font-size: 1.1rem;
     }
     
     .feature-card p {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 }
 
-/* Standard Mobile View */
-@media (max-width: 768px) {
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .feature-card {
-        padding: 1.5rem;
-    }
-}
 
 
 /* Author Profile Card Styles */
