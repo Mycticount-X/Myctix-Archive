@@ -628,6 +628,12 @@ nav {
     transition: transform 0.3s ease;
 }
 
+@media (minwidth: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    .qr-code {
+        width: 600px;
+    }
+}
+
 .qr-code:hover {
     transform: scale(1.03);
 }
