@@ -206,6 +206,10 @@ nav {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    .hero-text {
+        margin-left: 20px;
+    }
+
     .hero-text h1 {
         font-size: 40px;
     }
