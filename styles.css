@@ -629,7 +629,7 @@ nav {
 }
 
 @media (minwidth: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
-    .qr-code {
+    .qr-wrapper {
         width: 600px;
     }
 }
