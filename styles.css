@@ -176,12 +176,11 @@ nav {
 
 .hero-text h1 {
     color: var(--primary);
-    font-size: 3.0rem;
     margin-bottom: 15px;
 }
 
 .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     color: var(--dark);
 }
@@ -204,6 +203,44 @@ nav {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    #hero {
+        padding-top: 100px; /* Adjust padding for mobile desktop */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        margin-left: 0;
+    }
 }
 
 
@@ -243,7 +280,7 @@ nav {
 }
 
 /* Mobile Desktop Site (iPad, Tablet, Mobile dengan layar besar) */
-@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
     #features {
         font-size: 0.9rem; /* Turunkan base font-size */
     }
@@ -257,6 +294,7 @@ nav {
     }
     
     .feature-card h3 {
+        color: red;
         font-size: 1.1rem;
     }
     
