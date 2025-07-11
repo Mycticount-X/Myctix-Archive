@@ -220,22 +220,61 @@ nav {
 
 .feature-card {
     background-color: white;
-    padding: 30px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.feature-icon {
+    font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+    color: var(--primary);
+    margin-bottom: 1.5rem;
 }
 
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 20px;
+.feature-card h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 1rem;
 }
+
+.feature-card p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+/* Mobile Desktop Site Overrides */
+@media (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    #features {
+        zoom: 0.9;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        font-size: 2rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Standard Mobile View */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
 
 /* Author Profile Card Styles */
 #author {
