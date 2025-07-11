@@ -896,7 +896,7 @@ footer {
     color: var(--secondary);
 }
 
-@media (min-width: 769px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .footer-tagline {
         font-size: 14px;
     }
@@ -905,8 +905,12 @@ footer {
         font-size: 16px;
     }
 
+    .footer-links li {
+        margin-bottom: 0;
+    }
+
     .footer-links a {
-        margin-bottom: 2px;
+        font-size: 14px;
     }
 }
 
