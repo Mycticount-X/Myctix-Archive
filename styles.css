@@ -1017,11 +1017,6 @@ footer {
     color: var(--secondary);
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .footer-grid {
-        display: none !important;
-    }
-}
 
 @media (min-width: 1024px) {
     .footer-bottom {
