@@ -8,6 +8,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+// Countdown Timer
+function updateCountdown() {
+    const targetDate = new Date('September 22, 2025 00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+        document.getElementById('countdown-banner').style.display = 'none';
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
 <body>
     <!-- Header -->
     <header>
@@ -247,6 +274,7 @@
     </section>
 
 
+
     <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
@@ -256,7 +284,10 @@
             <!-- Per Mata Kuliah -->
             <div class="pricing-card">
                 <h3>Per Mata Kuliah</h3>
-                <div class="price">Rp 35.000</div>
+                <div class="price">
+                    <span class="discount-price">Rp 25.000</span>
+                    <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 50.000</span>
+                </div>
                 <ul>
                 <li><i class="fas fa-check"></i> <span>Pilih salah satu mata kuliah</span></li>
                 <li><i class="fas fa-check"></i> <span>Akses seumur hidup</span></li>
@@ -269,7 +300,10 @@
             <div class="pricing-card popular-card">
                 <div class="badge">POPULER</div>
                 <h3>Khusus Algorithm</h3>
-                <div class="price">Rp 50.000</div>
+                <div class="price">
+                    <span class="discount-price">Rp 40.000</span>
+                    <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 80.000</span>
+                </div>
                 <ul>
                 <li><i class="fas fa-check"></i> <span>Algoritma & Pemrograman C</span></li>
                 <li><i class="fas fa-check"></i> <span>Bonus: Kumpulan Soal Ujian</span></li>
@@ -282,7 +316,10 @@
             <!-- Paket Lengkap -->
             <div class="pricing-card">
                 <h3>Paket Lengkap</h3>
-                <div class="price">Rp 99.000</div>
+                <div class="price">
+                    <span class="discount-price">Rp 90.000</span>
+                    <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 180.000</span>
+                </div>
                 <ul>
                 <li><i class="fas fa-check"></i> <span>Algoritma & Pemrograman C</span></li>
                 <li><i class="fas fa-check"></i> <span>Matematika Diskrit</span></li>
@@ -295,6 +332,39 @@
             </div>
         </div>
     </section>
+
+    <!-- Countdown Discount Banner -->
+    <section id="countdown-banner">
+        <div class="container">
+            <h2 style="margin-bottom: 15px;">Promo Spesial Post-FYP! Diskon 50%</h2>
+            <!-- <p style="margin-bottom: 25px;">Promo Berakhir dalam:</p> -->
+            
+            <div class="countdown-timer" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
+                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
+                    <div class="countdown-number" id="days" style="font-size: 2.5rem; font-weight: 700;">00</div>
+                    <div class="countdown-label" style="font-size: 0.9rem;">Hari</div>
+                </div>
+                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
+                    <div class="countdown-number" id="hours" style="font-size: 2.5rem; font-weight: 700;">00</div>
+                    <div class="countdown-label" style="font-size: 0.9rem;">Jam</div>
+                </div>
+                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
+                    <div class="countdown-number" id="minutes" style="font-size: 2.5rem; font-weight: 700;">00</div>
+                    <div class="countdown-label" style="font-size: 0.9rem;">Menit</div>
+                </div>
+                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
+                    <div class="countdown-number" id="seconds" style="font-size: 2.5rem; font-weight: 700;">00</div>
+                    <div class="countdown-label" style="font-size: 0.9rem;">Detik</div>
+                </div>
+            </div>
+            
+            <p style="font-weight: 600; margin-bottom: 20px;">Dapatkan Semua Materi Sebelum Promo Berakhir!</p>
+            <a href="#pricing" class="btn" style="background: var(--secondary); border: none; padding: 12px 30px; font-size: 1.1rem;">
+                Lihat Harga Diskon
+            </a>
+        </div>
+    </section>
+
 
     <!-- Contact Section -->
     <section id="contact">
