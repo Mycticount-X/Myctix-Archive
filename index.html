@@ -3,455 +3,841 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notion belajar lengkap untuk mahasiswa Binus. Materi AlgoProg, Linear Algebra, Discrete Math dengan penjelasan santai dan mudah dipahami.">
+    <meta property="og:title" content="Myctix Archive">
+    <meta property="og:description" content="Notion lengkap untuk B29. Kuasai AlgoProg, Matematika Diskrit, Aljabar Linear dengan cara yang menyenangkan!">
+    <meta property="og:image" content="./assets/main.png">
+    <link rel="icon" type="image/png" href="./assets/logox.png">
+    
     <title>Myctix Archive</title>
-    <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-// Countdown Timer
-function updateCountdown() {
-    const targetDate = new Date('September 22, 2025 00:00:00').getTime();
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance < 0) {
-        document.getElementById('countdown-banner').style.display = 'none';
-        return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-}
-
-// Update countdown every second
-setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <img src="assets/logo.jpg" alt="Myctix Archive Logo">
-                    Myctix Archive
-                </a>
-                <ul class="nav-links">
-                    <!-- <li><a href="#about">Tentang</a></li> -->
-                    <li><a href="#features">Fitur</a></li>
-                    <li><a href="#preview">Produk</a></li>
-                    <li><a href="#author">Profil</a></li>
-                    <li><a href="#pricing">Harga</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
+<body class="bg-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="assets/logo.jpg" alt="Myctix Logo" class="w-full h-full rounded-lg object-cover">
+                    </div>
+                    <span class="font-bold text-xl text-gray-900">Myctix Archive</span>
                 </div>
-            </nav>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#features" class="nav-link text-gray-700 hover:text-blue-600">Fitur</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-blue-600">Produk</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-600">Testimoni</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-blue-600">Harga</a>
+                    <a href="#faq" class="nav-link text-gray-700 hover:text-blue-600">FAQ</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="desktop-contact bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md">
+                        Contact
+                    </a>
+                    <!-- Hamburger Button -->
+                    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
         </div>
-    </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Home</a>
+                <a href="#features" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Fitur</a>
+                <a href="#products" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Produk</a>
+                <a href="#testimonials" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Testimoni</a>
+                <a href="#pricing" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">Harga</a>
+                <a href="#faq" class="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition-colors font-medium" onclick="closeMobileMenu()">FAQ</a>
+                <a href="#contact" class="block py-3 px-4 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-colors font-medium text-center" onclick="closeMobileMenu()">Contact</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Belajar Santai, Hasil Maksimal</h1>
-                    <p>Notion lengkap untuk B29. Kuasai AlgoProg, Matematika Diskrit, Aljabar Linear, dan lainnya dengan cara yang menyenangkan!</p>
-                    <div class="cta-buttons">
-                        <a href="#preview" class="btn">Lihat Produk</a>
-                        <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
-                    </div>
+    <section id="home" class="pt-20 pb-16 relative overflow-hidden min-h-screen flex items-center">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50"></div>
+        
+        <!-- Floating Decorative Elements -->
+        <div class="absolute inset-0 pointer-events-none z-0">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-40 float-animation" style="animation-delay: 0s;"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-blue-300 rounded-lg opacity-30 float-animation" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-blue-400 rounded-full opacity-20 float-animation" style="animation-delay: 2s;"></div>
+            <div class="absolute top-10 right-1/4 w-10 h-10 bg-blue-200 rounded-full opacity-30 float-animation" style="animation-delay: 2.5s;"></div>
+            <div class="absolute bottom-10 left-10 w-16 h-16 bg-blue-300 rounded-lg opacity-20 float-animation" style="animation-delay: 3s;"></div>
+            
+            <!-- Animated dot grid -->
+            <div class="absolute top-60 right-1/3 grid grid-cols-3 gap-2 float-animation" style="animation-delay: 1.5s;">
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow"></div>
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 0.2s;"></div>
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 0.4s;"></div>
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 0.6s;"></div>
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 0.8s;"></div>
+                <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 1s;"></div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto flex items-center justify-center shadow-2xl">
+                    <img src="assets/logo.jpg" alt="Myctix Logo" class="w-full h-full rounded-2xl object-cover">
                 </div>
-                <div class="hero-image">
-                    <img src="./assets/main.png" alt="Myctix Archive Preview">
+            </div>
+            
+            <h2 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight fade-in-up">
+                Belajar Santai, <span class="gradient-text">Hasil Maksimal</span>
+            </h2>
+            
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-medium fade-in-up" style="animation-delay: 0.2s;">
+                Notion lengkap untuk mahasiswa Binus Computer Science
+            </p>
+            
+            <div class="flex justify-center mb-12 fade-in-up" style="animation-delay: 0.3s;">
+                <div class="flex space-x-2">
+                    <div class="w-3 h-3 bg-blue-600 rounded-full pulse-glow"></div>
+                    <div class="w-3 h-3 bg-blue-400 rounded-full pulse-glow" style="animation-delay: 0.3s;"></div>
+                    <div class="w-3 h-3 bg-blue-300 rounded-full pulse-glow" style="animation-delay: 0.6s;"></div>
                 </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100+</div>
+                    <div class="text-gray-600 font-medium">Mahasiswa Terbantu</div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">4.9/5</div>
+                    <div class="text-gray-600 font-medium">Rating Kepuasan</div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">∞</div>
+                    <div class="text-gray-600 font-medium">Lifetime Access</div>
+                </div>
+            </div>
+            
+            <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed fade-in-up" style="animation-delay: 0.5s;">
+                Materi lengkap AlgoProg, Discrete Math, Linear Algebra dengan penjelasan santai dan mudah dipahami. Ditulis oleh mahasiswa berprestasi dengan IPK 3.93 🎓
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up" style="animation-delay: 0.6s;">
+                <a href="#pricing" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Lihat Harga
+                </a>
+
+                <!-- <a href="#" onclick="openSampleModal(); return false;" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"> -->
+                <a href="#products" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                    Lihat Produk
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Fitur Unggulan</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Kenapa Pilih Myctix Archive?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Solusi belajar terbaik untuk mahasiswa Computer Science
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
-                    <h3>Materi Lengkap</h3>
-                    <p>Semua materi disusun sesuai silabus kampus terbaru, mencakup seluruh topik penting yang akan kamu pelajari di Binus.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Materi Lengkap</h3>
+                    <p class="text-gray-600">Semua topik dari pertemuan 1 sampai UAS, disusun sistematis dan mudah dipahami</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
+                
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
                     </div>
-                    <h3>Ditulis oleh Mahasiswa Berprestasi</h3>
-                    <p>Materi dibuat oleh mahasiswa yang pernah mendapatkan nilai sempurna (100) di AlgoProg dan Data Structure, dengan IPK 3.93.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Penulis Berprestasi</h3>
+                    <p class="text-gray-600">Ditulis oleh mahasiswa IPK 3.93, anggota S-Class, dengan nilai 100 di AlgoProg & Data Structure</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comments"></i>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-400 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                        </svg>
                     </div>
-                    <h3>Bahasa Santai</h3>
-                    <p>Penjelasan menggunakan bahasa sehari-hari yang mudah dimengerti, jauh dari kesan textbook yang kaku dan membosankan.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Bahasa Santai & Friendly</h3>
+                    <p class="text-gray-600">Penjelasan kasual seperti teman ngobrol, bukan textbook kaku yang bikin ngantuk</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-300 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
+                        </svg>
                     </div>
-                    <h3>Latihan Soal + Pembahasan</h3>
-                    <p>Puluhan soal latihan dengan pembahasan detail untuk mengasah pemahamanmu, termasuk soal ujian tahun-tahun sebelumnya.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Latihan Soal Lengkap</h3>
+                    <p class="text-gray-600">Puluhan soal latihan dengan pembahasan detail + soal UTS/UAS tahun-tahun sebelumnya</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-200 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                        </svg>
                     </div>
-                    <h3>Akses di HP dan Laptop</h3>
-                    <p>Bisa dibuka di semua perangkat melalui Notion, jadi kamu bisa belajar sambil nongkrong atau dalam perjalanan.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Konsultasi Gratis</h3>
+                    <p class="text-gray-600">Bingung dengan materi? Tanya langsung ke penulis kapan aja via WhatsApp</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-infinity"></i>
+
+                <!-- Feature 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-sm hover:shadow-xl border border-gray-200 p-8">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                        </svg>
                     </div>
-                    <h3>Lifetime Access</h3>
-                    <p>Sekali beli, bisa dipakai selamanya. Kamu juga akan mendapatkan update materi gratis di masa depan.</p>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Update Gratis Selamanya</h3>
+                    <p class="text-gray-600">Dapat update materi baru dan perbaikan tanpa perlu bayar lagi. Lifetime!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Preview Section -->
-    <section id="preview">
-        <div class="container">
-            <h2>Daftar Produk</h2>
-            <div class="preview-container">
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/algo.png" alt="Preview Algoritma">
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Daftar Produk</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Pilih mata kuliah yang kamu butuhkan
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/algo.png" alt="AlgoProg" class="w-full h-full object-cover">
                     </div>
-                    <p class="preview-caption">Algorithm and Programming</p>
-                </div>
-                
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/dismat.png" alt="Preview Matematika Diskrit">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Algorithm & Programming</h3>
+                        <p class="text-gray-600 mb-4">Materi lengkap C Programming dari basic sampai advanced dengan latihan soal</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 40.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 80.000</span>
+                        </div>
                     </div>
-                    <p class="preview-caption">Discrete Mathematics</p>
-                </div>
-                
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/linalg.png" alt="Preview Latihan Soal">
-                    </div>
-                    <p class="preview-caption">Linear Algebra</p>
                 </div>
 
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/datastruct.png" alt="Preview Latihan Soal">
+                <!-- Product 2 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/dismat.png" alt="Discrete Math" class="w-full h-full object-cover">
                     </div>
-                    <p class="preview-caption">Data Structure</p>
-
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Discrete Mathematics</h3>
+                        <p class="text-gray-600 mb-4">Logika, set theory, graph theory dijelaskan dengan cara yang mudah dipahami</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 25.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 50.000</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/calculaus.png" alt="Preview Latihan Soal">
+                <!-- Product 3 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/linalg.png" alt="Linear Algebra" class="w-full h-full object-cover">
                     </div>
-                    <p class="preview-caption">Calculus</p>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Linear Algebra</h3>
+                        <p class="text-gray-600 mb-4">Matrix, vector, eigenvalue dengan penjelasan visual dan intuitif</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 25.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 50.000</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="preview-item">
-                    <div class="image-container">
-                        <img src="./assets/scicomp.png" alt="Preview Latihan Soal">
+                <!-- Product 4 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/datastruct.png" alt="Data Structure" class="w-full h-full object-cover">
                     </div>
-                    <p class="preview-caption">Scientific Computing</p>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Data Structure</h3>
+                        <p class="text-gray-600 mb-4">Linked list, tree, graph dengan implementasi code dan visualisasi</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 50.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 100.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/calculaus.png" alt="Calculus" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Calculus</h3>
+                        <p class="text-gray-600 mb-4">Limit, derivative, integral dengan step-by-step explanation</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 25.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 50.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card-hover bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-2xl">
+                    <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+                        <img src="./assets/scicomp.png" alt="Scientific Computing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Scientific Computing</h3>
+                        <p class="text-gray-600 mb-4">Python untuk komputasi ilmiah, numerical methods, dan data analysis</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">Rp 25.000</span>
+                            <span class="text-sm text-gray-500 line-through">Rp 50.000</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Author Profile Section -->
-    <section id="author">
-        <div class="container">
-            <h2>Profil Penulis</h2>
+    <section id="author" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Profil Penulis</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Materi ditulis oleh mahasiswa berprestasi dengan track record yang solid
+                </p>
+            </div>
             
-            <div class="achievement-cards">
-                <!-- Card 1 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/s-class.jpg" alt="S-Class Member">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement 1 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
                     </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>Anggota S-Class</h3>
-                        <p>Kelas unggulan School of Computer Science dalam divisi Product Creation, berfokus pada pengembangan produk teknologi.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/hackathon.png" alt="Hackathon Project">
-                    </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Pengembang Aplikasi</h3>
-                        <p>Pernah mengikuti Hackathon Microsoft elevAIte 2024 dan Gemastik 2025 serta mengembangkan aplikasi mobile dengan teknologi terkini.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/aslab.jpg" alt="Aslab SLC">
-                    </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h3>Ex-Trainee Aslab SLC</h3>
-                        <p>Bergabung sebagai trainee asisten laboratorium di Binus University Learning Center.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Anggota S-Class</h3>
+                    <p class="text-gray-600 text-sm">Kelas unggulan School of Computer Science dalam divisi Product Creation</p>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/microsoft.jpg" alt="Microsoft Certification">
+                <!-- Achievement 2 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                        </svg>
                     </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3>Sertifikasi Microsoft</h3>
-                        <p>Mengikuti pelatihan ujian sertifikasi Fundamental AI-900 dari Microsoft.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">IPK 3.93</h3>
+                    <p class="text-gray-600 text-sm">Prestasi akademik cemerlang dengan nilai sempurna di AlgoProg dan Data Structure</p>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/teaching.jpg" alt="Teaching Experience">
+                <!-- Achievement 3 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                        </svg>
                     </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <h3>Aktif Mengajar</h3>
-                        <p>Membantu teman-teman seangkatan memahami materi kuliah dan menjadi volunteer lecturer.</p>
-                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pengalaman Hackathon</h3>
+                    <p class="text-gray-600 text-sm">Pernah mengikuti Microsoft elevAIte 2024 dan Gemastik 2025</p>
                 </div>
 
-                <!-- Card 6 -->
-                <div class="achievement-card">
-                    <div class="card-image">
-                        <img src="./assets/notes.jpg" alt="Study Notes">
+                <!-- Achievement 4 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                        </svg>
                     </div>
-                    <div class="card-content">
-                        <div class="achievement-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <h3>Pembuat Catatan Belajar</h3>
-                        <p>Berpengalaman membuat catatan belajar terstruktur sejak semester awal perkuliahan.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Sertifikasi Microsoft</h3>
+                    <p class="text-gray-600 text-sm">Mengikuti pelatihan ujian sertifikasi Fundamental AI-900 dari Microsoft</p>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                        </svg>
                     </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Aktif Mengajar</h3>
+                    <p class="text-gray-600 text-sm">Membantu teman-teman seangkatan memahami materi dan menjadi volunteer lecturer</p>
+                </div>
+
+                <!-- Achievement 6 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pembuat Catatan Berpengalaman</h3>
+                    <p class="text-gray-600 text-sm">Membuat catatan belajar terstruktur sejak semester awal perkuliahan</p>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- Testimonials Section -->
+    
 
     <!-- Pricing Section -->
-    <section id="pricing">
-        <div class="container">
-            <h2>Harga & Cara Pemesanan</h2>
-
-            <div class="pricing-grid">
-            <!-- Per Mata Kuliah -->
-            <div class="pricing-card">
-                <h3>Per Mata Kuliah</h3>
-                <div class="price">
-                    <span class="discount-price">Rp 50.000</span>
-                    <!-- <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 50.000</span> -->
-                </div>
-                <ul>
-                <li><i class="fas fa-check"></i> <span>Pilih salah satu mata kuliah</span></li>
-                <li><i class="fas fa-check"></i> <span>Akses seumur hidup</span></li>
-                <li><i class="fas fa-check"></i> <span>Update materi gratis</span></li>
-                </ul>
-                <a href="#contact" class="btn" style="display:block;text-align:center;width:100%;">Pilih Ini</a>
-            </div>
-
-            <!-- Khusus Algorithm -->
-            <div class="pricing-card popular-card">
-                <div class="badge">POPULER</div>
-                <h3>Khusus Algorithm</h3>
-                <div class="price">
-                    <span class="discount-price">Rp 80.000</span>
-                    <!-- <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 80.000</span> -->
-                </div>
-                <ul>
-                <li><i class="fas fa-check"></i> <span>Algoritma & Pemrograman C</span></li>
-                <li><i class="fas fa-check"></i> <span>Bonus: Kumpulan Soal Ujian</span></li>
-                <li><i class="fas fa-check"></i> <span>Akses seumur hidup</span></li>
-                <li><i class="fas fa-check"></i> <span>Update materi gratis</span></li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary" style="display:block;text-align:center;width:100%;background-color:var(--secondary);color:white;">Pilih Ini</a>
-            </div>
-
-            <!-- Paket Lengkap -->
-            <div class="pricing-card">
-                <h3>Paket Lengkap</h3>
-                <div class="price">
-                    <span class="discount-price">Rp 180.000</span>
-                    <!-- <span class="original-price" style="text-decoration: line-through; color: var(--gray); margin-right: 10px;">Rp 180.000</span> -->
-                </div>
-                <ul>
-                <li><i class="fas fa-check"></i> <span>Algoritma & Pemrograman C</span></li>
-                <li><i class="fas fa-check"></i> <span>Matematika Diskrit</span></li>
-                <li><i class="fas fa-check"></i> <span>Aljabar Linear</span></li>
-                <li><i class="fas fa-check"></i> <span>Akses seumur hidup</span></li>
-                <li><i class="fas fa-check"></i> <span>Update materi gratis</span></li>
-                </ul>
-                <a href="#contact" class="btn" style="display:block;text-align:center;width:100%;">Pilih Ini</a>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Countdown Discount Banner -->
-    <section id="countdown-banner">
-        <div class="container">
-            <h2 style="margin-bottom: 15px;">Promo Spesial Post-FYP! Diskon 50%</h2>
-            <!-- <p style="margin-bottom: 25px;">Promo Berakhir dalam:</p> -->
-            
-            <div class="countdown-timer" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
-                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
-                    <div class="countdown-number" id="days" style="font-size: 2.5rem; font-weight: 700;">00</div>
-                    <div class="countdown-label" style="font-size: 0.9rem;">Hari</div>
-                </div>
-                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
-                    <div class="countdown-number" id="hours" style="font-size: 2.5rem; font-weight: 700;">00</div>
-                    <div class="countdown-label" style="font-size: 0.9rem;">Jam</div>
-                </div>
-                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
-                    <div class="countdown-number" id="minutes" style="font-size: 2.5rem; font-weight: 700;">00</div>
-                    <div class="countdown-label" style="font-size: 0.9rem;">Menit</div>
-                </div>
-                <div class="countdown-item" style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; min-width: 70px;">
-                    <div class="countdown-number" id="seconds" style="font-size: 2.5rem; font-weight: 700;">00</div>
-                    <div class="countdown-label" style="font-size: 0.9rem;">Detik</div>
-                </div>
-            </div>
-            
-            <p style="font-weight: 600; margin-bottom: 20px;">Dapatkan Semua Materi Sebelum Promo Berakhir!</p>
-            <a href="#pricing" class="btn" style="background: var(--secondary); border: none; padding: 12px 30px; font-size: 1.1rem;">
-                Lihat Harga Diskon
-            </a>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            
-            <div class="qr-wrapper">
-                <span class="qr-label">WhatsApp Quick Connect</span>
-                <div class="qr-code">
-                    <img src="./assets/qrwa.jpg" alt="QR Code WhatsApp" loading="lazy">
-                </div>
-                <p class="qr-instruction">
-                    Scan QR code atau klik tombol di bawah ini
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pilih Paket Belajar Kamu</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Investasi terbaik untuk masa depan akademikmu
                 </p>
             </div>
 
-            <div class="contact-buttons">
-                <a href="https://wa.me/6281519870235" class="contact-btn whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    WhatsApp
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Package 1 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Per Mata Kuliah</h3>
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold text-blue-600">Rp 25K</span>
+                            <span class="ml-2 text-gray-500 line-through">Rp 50K</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Diskon 50%</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Pilih 1 mata kuliah</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Lifetime access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Update gratis</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        Pilih Paket
+                    </a>
+                </div>
+
+                <!-- Package 2 - Popular -->
+                <div class="card-hover bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 shadow-2xl border-2 border-blue-600 transform scale-105 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+                        TERLARIS
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Paket Algorithm</h3>
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold text-white">Rp 40K</span>
+                            <span class="ml-2 text-blue-200 line-through">Rp 80K</span>
+                        </div>
+                        <p class="text-sm text-blue-200 mt-1">Diskon 50%</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-yellow-400 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">AlgoProg lengkap</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-yellow-400 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Bonus soal ujian</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-yellow-400 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Lifetime access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-yellow-400 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Konsultasi gratis</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        Pilih Paket
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Paket Lengkap</h3>
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-bold text-blue-600">Rp 90K</span>
+                            <span class="ml-2 text-gray-500 line-through">Rp 180K</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-1">Diskon 50% • Hemat 90K!</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">AlgoProg + Bonus</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Discrete Math</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Linear Algebra</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-green-500 mt-1 mr-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Lifetime access</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center bg-gray-100 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        Pilih Paket
+                    </a>
+                </div>
+            </div>
+
+            <!-- Promo Banner -->
+            <div class="mt-12 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-8 text-center shadow-xl">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">🔥 Promo Akhir Tahun! 🔥</h3>
+                <p class="text-gray-800 mb-4">Diskon hingga 25% untuk semua paket. Promo berakhir dalam:</p>
+                <div class="flex justify-center space-x-4 mb-6">
+                    <div class="bg-white/30 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold text-gray-900" id="days">00</div>
+                        <div class="text-sm text-gray-800">Hari</div>
+                    </div>
+                    <div class="bg-white/30 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold text-gray-900" id="hours">00</div>
+                        <div class="text-sm text-gray-800">Jam</div>
+                    </div>
+                    <div class="bg-white/30 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold text-gray-900" id="minutes">00</div>
+                        <div class="text-sm text-gray-800">Menit</div>
+                    </div>
+                    <div class="bg-white/30 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
+                        <div class="text-3xl font-bold text-gray-900" id="seconds">00</div>
+                        <div class="text-sm text-gray-800">Detik</div>
+                    </div>
+                </div>
+                <a href="#contact" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors shadow-lg">
+                    Ambil Promo Sekarang!
                 </a>
-                <a href="https://linktr.ee/Mycticount_X" class="contact-btn linktree" target="_blank">
-                    <i class="fas fa-link"></i>
-                    Linktree
-                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Pertanyaan yang sering diajukan
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(1)">
+                        <h3 class="text-lg font-semibold text-gray-900">Bagaimana cara akses Notion setelah beli?</h3>
+                        <svg id="faq-icon-1" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Setelah transfer, kamu dapat mengirimkan email akun Notion kamu dan kamu langsung dapet link akses ke Notion yang bisa dibuka di HP atau laptop. Akses berlaku selamanya dan bisa dibuka kapan aja!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(4)">
+                        <h3 class="text-lg font-semibold text-gray-900">Apakah materinya up to date dengan kurikulum Binus?</h3>
+                        <svg id="faq-icon-4" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Yes! Materi disusun berdasarkan kurikulum terbaru Binus dan pengalaman langsung penulis yang lulus mata kuliah tersebut dengan nilai IPK 3.93.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(3)">
+                        <h3 class="text-lg font-semibold text-gray-900">Berapa lama akses berlaku?</h3>
+                        <svg id="faq-icon-3" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Lifetime access! Sekali beli, bisa dipakai selamanya. Kamu juga dapet update materi gratis kalau ada penambahan konten baru.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(2)">
+                        <h3 class="text-lg font-semibold text-gray-900">Apakah bisa refund kalau tidak sesuai?</h3>
+                        <svg id="faq-icon-2" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Karena ini produk digital, refund tidak tersedia. Tapi kamu bisa tanya kami melalui WhatsApp di bawah ini untuk memastikan materinya cocok dengan kebutuhanmu!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(5)">
+                        <h3 class="text-lg font-semibold text-gray-900">Bisa konsultasi kalau ada yang gak ngerti?</h3>
+                        <svg id="faq-icon-5" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Tentu! Setiap pembeli dapet akses konsultasi gratis via WhatsApp. Tanya apa aja yang berhubungan dengan materi, penulis siap bantu!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <button class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors" onclick="toggleFaq(6)">
+                        <h3 class="text-lg font-semibold text-gray-900">Apakah cocok untuk pemula yang baru mulai coding?</h3>
+                        <svg id="faq-icon-6" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-content-6" class="hidden px-6 pb-5">
+                        <p class="text-gray-600">Sangat cocok! Penjelasannya dimulai dari dasar dengan bahasa yang santai dan mudah dipahami. Perfect buat yang baru mulai belajar programming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mt-4">
+                    Siap memulai perjalanan belajarmu?
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-xl border border-gray-200 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">WhatsApp Quick Connect</h3>
+                    <div class="w-48 h-48 mx-auto mb-6 border-2 border-gray-200 rounded-xl overflow-hidden">
+                        <img src="./assets/qrwa.jpg" alt="QR WhatsApp" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-gray-600 mb-6">Scan QR code atau klik tombol di bawah ini</p>
+                    <a href="https://wa.me/6281519870235?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20Myctix%20Archive%21%20Bisa%20info%20lebih%20lanjut%3F" target="_blank" class="inline-flex items-center justify-center space-x-3 bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Chat via WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="https://linktr.ee/Myctix_Archive" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-400 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-teal-500 hover:to-teal-700 transition-all shadow-md">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M13.511 5.853l4.005-4.117 2.325 2.381-4.201 4.005h5.909v3.305h-5.937l4.229 4.108-2.325 2.334-5.741-5.769-5.741 5.769-2.325-2.325 4.229-4.108H2V8.122h5.909L3.708 4.117l2.325-2.381 4.005 4.117V0h3.473v5.853zM10.038 16.542h3.473v7.458h-3.473v-7.458z"/>
+                        </svg>
+                        <span>Linktree</span>
+                    </a>
+                </div>
+
+                <!-- Easter Egg Hint -->
+                <div class="mt-12 text-center">
+                    <p class="text-sm text-gray-500">💡 Psst... ada surprise di pojok kanan bawah 🎯</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#" class="footer-logo">
-                        <img src="./assets/logo.jpg" alt="Myctix Archive Logo" width="40" height="40">
-                        Myctix Archive
-                    </a>
-                    <p class="footer-tagline">Belajar santai, hasil maksimal untuk Binusian</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <img src="assets/logo.jpg" alt="Logo" class="w-full h-full rounded-lg object-cover">
+                        </div>
+                        <span class="font-bold text-xl">Myctix Archive</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Platform belajar terbaik untuk mahasiswa Binus Computer Science. Belajar santai, hasil maksimal!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/6281519870235?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20Myctix%20Archive%21" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://wa.me/6281519870235?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20Myctix%20Archive%21" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linktree"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="footer-links">
-                    <h3 class="footer-heading">Produk</h3>
-                    <ul>
-                        <li><a href="#preview">Algorithm & Programming</a></li>
-                        <li><a href="#preview">Matematika Diskrit</a></li>
-                        <li><a href="#preview">Aljabar Linear</a></li>
-                        <li><a href="#pricing">Paket Lengkap</a></li>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Fitur</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-colors">Produk</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimoni</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Harga</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-links">
-                    <h3 class="footer-heading">Navigasi</h3>
-                    <ul>
-                        <li><a href="#about">Tentang Kami</a></li>
-                        <li><a href="#author">Profil Penulis</a></li>
-                        <li><a href="#contact">Kontak</a></li>
-                        <li><a href="#pricing">Harga</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-cta">
-                    <h3 class="footer-heading">Butuh Bantuan?</h3>
-                    <!-- WhatsApp-style small button -->
-                    <a href="https://wa.me/6281519870235" class="btn-small whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        Contact Us
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Butuh Bantuan?</h3>
+                    <a href="https://wa.me/6281519870235?text=Halo%20kak%2C%20saya%20tertarik%20dengan%20Myctix%20Archive%21" target="_blank" class="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Contact Us</span>
                     </a>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2025 Myctix Archive. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; <span id="year"></span> Myctix Archive. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <!-- Sample Modal -->
+    <div id="sampleModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl transform transition-all">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 flex items-center justify-between">
+                <div>
+                    <h3 class="text-2xl font-bold">Sample Preview - Algorithm & Programming</h3>
+                    <p class="text-blue-100 text-sm mt-1">Lihat sekilas isi materi yang kamu dapatkan</p>
+                </div>
+                <button onclick="closeSampleModal()" class="text-white hover:text-gray-200 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="p-8 overflow-y-auto max-h-[calc(90vh-120px)] modal-scroll">
+                <div class="bg-gray-50 rounded-xl p-6 mb-6">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">📚 Bab 1: Introduction to C Programming</h4>
+                    <p class="text-gray-700 mb-4">Halo guys! Di chapter pertama ini kita bakal kenalan sama bahasa C. Jangan takut, gue bakal jelasin dengan bahasa yang simpel dan gak bikin pusing.</p>
+                    
+                    <h5 class="font-bold text-gray-900 mb-2">Yang Bakal Kamu Pelajari:</h5>
+                    <ul class="space-y-2 text-gray-700 ml-4">
+                        <li>• Apa itu programming dan kenapa harus belajar C?</li>
+                        <li>• Setup environment (CodeBlocks, Visual Studio, dll)</li>
+                        <li>• Struktur dasar program C</li>
+                        <li>• Variables dan Data Types</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6 mb-6">
+                    <h5 class="font-bold text-blue-900 mb-2">💡 Tips dari Penulis:</h5>
+                    <p class="text-blue-800 italic">
+                        "Pas awal belajar C, gue juga bingung kenapa harus pake semicolon terus. Tapi tenang, nanti lama-lama jadi kebiasaan kok! Yang penting konsisten latihan."
+                    </p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+                    <h5 class="font-bold text-gray-900 mb-3">🧪 Contoh Latihan Soal:</h5>
+                    <div class="bg-gray-50 rounded-lg p-4 mb-3">
+                        <p class="font-semibold text-gray-900 mb-2">Soal 1: Hello World</p>
+                        <p class="text-gray-700">Buatlah program yang mencetak "Hello, World!" ke layar.</p>
+                        <p class="text-sm text-blue-600 mt-2">
+                            <i class="fas fa-lightbulb"></i> Hint: Gunakan fungsi printf()
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <p class="font-semibold text-gray-900 mb-2">Soal 2: Variable Declaration</p>
+                        <p class="text-gray-700">Deklarasikan variable integer dengan nama 'age' dan assign value 20, lalu print hasilnya.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl p-6 text-center">
+                    <p class="text-lg mb-2">Ini baru <strong>1 dari 14 chapter</strong> yang ada!</p>
+                    <p class="text-blue-100 mb-4">Materi lengkap mencakup semua topik dari basic sampai advanced + pembahasan soal UTS/UAS</p>
+                    <a href="#pricing" onclick="closeSampleModal()" class="inline-block bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors">
+                        Beli Sekarang dengan Diskon 50%
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg -->
+    <div id="easterEgg" class="fixed bottom-8 right-8 z-40 cursor-pointer transform hover:scale-110 transition-transform" onclick="showEasterEgg()">
+        <div class="relative group">
+            <div class="text-5xl animate-bounce">🎯</div>
+            <div class="absolute -top-12 -left-16 bg-gray-900 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Klik untuk surprise! 🎁
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
