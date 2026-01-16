@@ -158,6 +158,18 @@ body {
     max-height: 500px;
 }
 
+.vibe-coder {
+    position: relative;
+    /* 
+        Key 1: MXA{Th4nK-U_~
+    */
+
+    /* 
+        Clue 2:
+        Screenshot of Struct and Pointer
+    */
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
