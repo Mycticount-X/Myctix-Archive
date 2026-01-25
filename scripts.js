@@ -32,7 +32,7 @@ document.addEventListener('click', function(event) {
 
 // Countdown Timer
 function updateCountdown() {
-    const targetDate = new Date('December 31, 2025 23:59:59').getTime();
+    const targetDate = new Date('February 15, 2026 23:59:59').getTime();
     const now = new Date().getTime();
     const distance = targetDate - now;
 
@@ -116,7 +116,7 @@ document.getElementById('sampleModal')?.addEventListener('click', function(e) {
 
 // Easter Egg
 function showEasterEgg() {
-    alert('🎉 Selamat! Kamu menemukan Easter Egg!\n\n💰 Kode promo spesial: KITABALASDIUAS\n\nDapatkan diskon hingga 25% dengan mengirimkan kode ini via WhatsApp! 🚀\n\nJangan lupa screenshot ini ya! 📸');
+    alert('🎉 Selamat! Kamu menemukan Easter Egg!\n\n💰 Kode promo spesial: KITABALASDIUAS\n\nDapatkan diskon 50% dengan mengirimkan kode ini via WhatsApp! 🚀\n\nJangan lupa screenshot ini ya! 📸');
 }
 
 // Smooth scroll for navigation
